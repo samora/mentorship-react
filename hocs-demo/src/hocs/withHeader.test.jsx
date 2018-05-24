@@ -4,11 +4,12 @@ import { withHeader } from './withHeader';
 
 describe('withHeader HOC', () => {
   it('should render header', () => {
-    const wrapper = mount(
-      withHeader(
-        <p>Some content here</p>
-      )
+    const enhanced = withHeader(
+      <p>Some content here</p>
     );
-    expect(wrapper.find('#header')).toHaveLength(1);
+    const wrapper = mount(
+      <enhanced />
+    );
+    expect(wrapper.find('#main-header').length).toBe(1); 
   })
 });

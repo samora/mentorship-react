@@ -5,7 +5,7 @@ export function withHeader(WrappedComponent) {
     render() {
       return (
         <Fragment>
-          <h1 id="header">Hammer Time!</h1>
+          <h1 id="main-header">Hammer Time!</h1>
           <WrappedComponent {...this.props}/>
         </Fragment>
       )
